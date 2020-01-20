@@ -93,25 +93,22 @@ class MongoPipeline(object):
     def __init__(self):
         import logging
         import scrapy_app.settings as db_conf
-        self.mongo_usr = db_conf.MONGODB_USER
-        logging.info('The usr is {}'.format(self.mongo_usr))
-        self.mongo_pass = db_conf.MONGODB_PASS
-        self.mongo_host = db_conf.MONGODB_SERVER
-        self.mongo_port = db_conf.MONGODB_PORT
-        self.mongo_collection = 'items'
-        self.mongo_db = 'medium'
 
-        self.mongo_uri = "mongodb://{usr}:{dbpass}@{host}:{port}".format(usr= self.mongo_usr, dbpass= self.mongo_pass, 
-                                                        host= self.mongo_host,
-                                                        port = self.mongo_port,
-                                                       authSource="admin")
+        self.mongo_uri = db_conf.MONGODB_URI
+        self.mongo_db = db_conf.MONGODB_DATABASE
+        self.mongo_collection = db_conf.MONGODB_COLLECTION
+
+
     def open_spider(self, spider):
         self.client = pymongo.MongoClient(self.mongo_uri)
         self.db = self.client[self.mongo_db]
 
     def process_item(self, item, spider):
-        self.db[self.mongo_collection].insert_one(dict(item))
-        return item
+        if self.db[self.mongo_collection].find_one({"article_id" : item["article_id"]}):
+            raise DropItem("Item already exists in DB")
+        else:
+            self.db[self.mongo_collection].insert_one(dict(item))
+            return item
     
     def close_spider(self, spider):
         self.client.close()

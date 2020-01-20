@@ -111,4 +111,4 @@ dmypy.json
 input/
 logs/
 results/*
-
+etc/log.txt

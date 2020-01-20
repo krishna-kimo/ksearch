@@ -9,6 +9,7 @@ LOG_DIR = path.join(PROJECT_DIR, 'etc')
 INPUT_FILE_PATH = path.join(PROJECT_DIR, 'ml.txt')
 INPUT_FILE_DIR = path.join(PROJECT_DIR, 'input')
 DOWNLOAD_DELAY = 1
+DATA_FILE_PATH = ''
 
 MAX_RESULTS_PER_QUERY = 10
 
@@ -24,7 +25,7 @@ ITEM_PIPELINES = {
     #'scrapy_app.pipelines.CSVPipeline': 700,
     'scrapy_app.pipelines.JsonPipeline': 800,
     #'scrapy_app.pipelines.SummaryJsonPipeline': 900,
-    #'scrapy_app.pipelines.MongoPipeline': 950,
+    'scrapy_app.pipelines.MongoPipeline': 950,
     #'scrapy_app.pipelines.DuplicateFinderPipeline': 150,
 }
 
@@ -46,7 +47,9 @@ configure_file_logging(log_dir=LOG_DIR, file_name='log.txt', mode='w', level=log
 '''
 MONGODB_SERVER = '127.0.0.1'
 MONGODB_PORT = 27017
-MONGODB_DATABASE = 'medium'
-MONGODB_COLLECTION = 'results'
-MONGODB_USER = 'root'
-MONGODB_PASS = 'pass'
+MONGODB_DATABASE = 'kimo_data'
+MONGODB_COLLECTION = 'medium'
+MONGODB_USER = 'kimo_1'
+MONGODB_PASS = 'OoFV4Mdw8DpJGXrP'
+MONGODB_URI = 'mongodb+srv://{}:{}@kimo0-0tlxa.mongodb.net/test?retryWrites=true&w=majority'.format(MONGODB_USER, MONGODB_PASS)
+
