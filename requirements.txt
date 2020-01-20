@@ -1,0 +1,14 @@
+Scrapy>=1.5.0
+tqdm
+pymongo
+attrs
+boto
+cffi
+cycler
+enum34
+futures
+gunicorn
+httplib2
+idna
+ipaddress
+lxml

@@ -1,0 +1,306 @@
+2020-01-17 18:52:08 INFO: Scrapy 1.6.0 started (bot: scrapybot)
+2020-01-17 18:52:08 INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.6.8 |Anaconda, Inc.| (default, Dec 29 2018, 19:04:46) - [GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Darwin-19.0.0-x86_64-i386-64bit
+2020-01-17 18:52:08 INFO: Overridden settings: {'DOWNLOAD_DELAY': 1, 'EDITOR': 'mvim', 'LOG_FILE': 'logs/kimo/medium/5a294c8c392c11ea835cdca9046dab28.log', 'SPIDER_MODULES': ['scrapy_app.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'}
+2020-01-17 18:52:08 INFO: Telnet Password: 5dc0ef96b9447c18
+2020-01-17 18:52:08 INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-17 18:52:08 INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-17 18:52:08 INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-17 18:52:08 INFO: Enabled item pipelines:
+['scrapy_app.pipelines.Format', 'scrapy_app.pipelines.JsonPipeline']
+2020-01-17 18:52:08 INFO: Spider opened
+2020-01-17 18:52:08 INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-17 18:52:08 INFO: Telnet console listening on 127.0.0.1:6023
+2020-01-17 18:52:09 INFO: The file is being used - /Users/nkdeepak/Dropbox/Projects/scrapy/searchspider/input/test.txt
+2020-01-17 18:52:09 INFO: Total no of keywords are: 1
+2020-01-17 18:52:09 INFO: Queries to search: ['Machine Learning + Natural Language Processing']
+2020-01-17 18:52:10 DEBUG: Crawled (200) <POST https://medium.com/search/posts?q=Machine%20Learning%20+%20Natural%20Language%20Processing> (referer: None)
+2020-01-17 18:52:11 INFO: Opened list page (url: "https://medium.com/search/posts?q=Machine%20Learning%20+%20Natural%20Language%20Processing")
+2020-01-17 18:52:11 DEBUG: Scraped from <200 https://medium.com/search/posts?q=Machine%20Learning%20+%20Natural%20Language%20Processing>
+{'article_created_at': '2017-03-27 23:24:21',
+ 'article_id': '609277a66c01',
+ 'article_subtitle': 'Next week, I’ll be in Spain thinking about ethics and '
+                     'artificial intelligence. You can find my 5-pg paper, '
+                     '“Goal-oriented design for…',
+ 'article_tags': ['Artificial Intelligence', 'Machine Learning'],
+ 'article_title': 'Ethics in machine-learning, natural language processing, '
+                  'and AI',
+ 'article_updated_at': '2018-06-12 18:46:03',
+ 'article_url': 'https://medium.com//-609277a66c01',
+ 'author_bio': 'Linguistics and language, data science and artificial '
+               'intelligence, UX and design, travel, San Francisco. Want to '
+               'talk about emoticons, emoji or AI?',
+ 'author_name': 'Tyler Schnoebelen',
+ 'author_pic': 'https://cdn-images-1.medium.com/fit/c/256/256/0*-pvMJnRN5qTKdjn2.jpg',
+ 'author_url': 'https://medium.com/@TSchnoebelen',
+ 'author_username': 'TSchnoebelen',
+ 'count_claps': 33,
+ 'count_responses': 2,
+ 'info_images': 1,
+ 'info_time': 0.8301886792452831,
+ 'info_words': 167,
+ 'query': 'Machine Learning + Natural Language Processing'}
+2020-01-17 18:52:11 DEBUG: Scraped from <200 https://medium.com/search/posts?q=Machine%20Learning%20+%20Natural%20Language%20Processing>
+{'article_created_at': '2016-10-10 21:57:03',
+ 'article_id': 'd5d079e0c4de',
+ 'article_subtitle': 'Early trends from our survey about Machine Learning, '
+                     'Natural Language Processing and Computer Vision',
+ 'article_tags': ['Machine Learning',
+                  'Artificial Intelligence',
+                  'Startup',
+                  'Data Science',
+                  'Big Data'],
+ 'article_title': 'A Sneak Peek at the State of AI 2016',
+ 'article_updated_at': '2018-04-18 12:41:29',
+ 'article_url': 'https://medium.com//-d5d079e0c4de',
+ 'author_bio': 'Computational linguist. Author @spacy_io NLP tools. Founder '
+               '@explosion_ai.',
+ 'author_name': 'Matthew Honnibal',
+ 'author_pic': 'https://cdn-images-1.medium.com/fit/c/256/256/0*xkbekdAVCjdP4XC7.png',
+ 'author_url': 'https://medium.com/@honnibal',
+ 'author_username': 'honnibal',
+ 'count_claps': 75,
+ 'count_responses': 1,
+ 'info_images': 7,
+ 'info_time': 2.400943396226415,
+ 'info_words': 358,
+ 'query': 'Machine Learning + Natural Language Processing'}
+2020-01-17 18:52:11 DEBUG: Scraped from <200 https://medium.com/search/posts?q=Machine%20Learning%20+%20Natural%20Language%20Processing>
+{'article_created_at': '2016-07-07 18:21:33',
+ 'article_id': '8753e35dddb2',
+ 'article_subtitle': 'Machine Intelligence, a term that encompasses Artificial '
+                     'Intelligence, Machine Learning, Natural Language '
+                     'Processing, Predictive APIs and…',
+ 'article_tags': ['Healthcare',
+                  'Machine Intelligence',
+                  'AI',
+                  'Ibm Watson',
+                  'Clinical Trials'],
+ 'article_title': 'Machine Intelligence, Healthcare and Clinical Trials',
+ 'article_updated_at': '2018-03-29 13:56:17',
+ 'article_url': 'https://medium.com//-8753e35dddb2',
+ 'author_bio': 'Strategy Director. ex-CD, Planning Director & Head of UX @ '
+               'Digitas, DIG, Publicis, Chemistry & JWT. APG Gold & Google '
+               'Planning Innovator of Year.',
+ 'author_name': 'David J Carr',
+ 'author_pic': 'https://cdn-images-1.medium.com/fit/c/256/256/0*XYmrFklEVHRlIrnr.jpg',
+ 'author_url': 'https://medium.com/@djc1805',
+ 'author_username': 'djc1805',
+ 'count_claps': 40,
+ 'count_responses': 0,
+ 'info_images': 2,
+ 'info_time': 6.836163522012579,
+ 'info_words': 1710,
+ 'query': 'Machine Learning + Natural Language Processing'}
+2020-01-17 18:52:11 DEBUG: Scraped from <200 https://medium.com/search/posts?q=Machine%20Learning%20+%20Natural%20Language%20Processing>
+{'article_created_at': '2016-11-15 09:53:43',
+ 'article_id': '21cfe3dd2e82',
+ 'article_subtitle': 'There’s no reason why Smalltalk couldn’t be used to '
+                     'write theorem provers. It’s adept at machine learning, '
+                     'natural language processing…',
+ 'article_tags': [],
+ 'article_title': 'You are quite right: Smalltalk is not a systems programming '
+                  'language, so no operating systems nor…',
+ 'article_updated_at': '2019-01-29 23:16:34',
+ 'article_url': 'https://medium.com//-21cfe3dd2e82',
+ 'author_bio': 'Mr. Smalltalk: '
+               'https://medium.com/p/domo-arigato-mr-smalltalk-aa84e245beb9',
+ 'author_name': 'Richard Kenneth Eng',
+ 'author_pic': 'https://cdn-images-1.medium.com/fit/c/256/256/0*dSrA2u02KEYOfFqe.jpg',
+ 'author_url': 'https://medium.com/@richardeng',
+ 'author_username': 'richardeng',
+ 'count_claps': 2,
+ 'count_responses': 1,
+ 'info_images': 0,
+ 'info_time': 0.4981132075471698,
+ 'info_words': 132,
+ 'query': 'Machine Learning + Natural Language Processing'}
+2020-01-17 18:52:11 DEBUG: Scraped from <200 https://medium.com/search/posts?q=Machine%20Learning%20+%20Natural%20Language%20Processing>
+{'article_created_at': '2017-01-19 17:36:39',
+ 'article_id': 'da4166568dee',
+ 'article_subtitle': 'MACHINE LEARNING, NATURAL LANGUAGE PROCESSING, AND SEO',
+ 'article_tags': ['Speech Recognition',
+                  'Machine Learning',
+                  'SEO',
+                  'Digital Marketing',
+                  'Voice Assistant'],
+ 'article_title': 'The Butler Did It!',
+ 'article_updated_at': '2018-04-23 22:58:52',
+ 'article_url': 'https://medium.com//-da4166568dee',
+ 'author_bio': 'I work to make the web a more beautiful, accessible, and '
+               'functional place. I use dreams as a form of planning. And I '
+               'play because it’s fun.',
+ 'author_name': 'Anna Colibri',
+ 'author_pic': 'https://cdn-images-1.medium.com/fit/c/256/256/2*cokn_j3nY2I6hdfxWpZOOQ.jpeg',
+ 'author_url': 'https://medium.com/@annacolibri',
+ 'author_username': 'annacolibri',
+ 'count_claps': 1,
+ 'count_responses': 0,
+ 'info_images': 1,
+ 'info_time': 8.381132075471697,
+ 'info_words': 2168,
+ 'query': 'Machine Learning + Natural Language Processing'}
+2020-01-17 18:52:11 DEBUG: Scraped from <200 https://medium.com/search/posts?q=Machine%20Learning%20+%20Natural%20Language%20Processing>
+{'article_created_at': '2018-11-28 20:33:21',
+ 'article_id': 'd88fb9c5c8da',
+ 'article_subtitle': 'Part six of the 50 datasets series by Cambridge Spark, '
+                     'Data Science experts',
+ 'article_tags': ['Machine Learning',
+                  'Naturallanguageprocessing',
+                  'Data Science',
+                  'Sentiment Analysis'],
+ 'article_title': '50 Free Machine Learning Datasets: Natural Language '
+                  'Processing',
+ 'article_updated_at': '2018-12-06 20:35:08',
+ 'article_url': 'https://medium.com//-d88fb9c5c8da',
+ 'author_bio': 'Data Science Specialists',
+ 'author_name': 'Cambridge Spark',
+ 'author_pic': 'https://cdn-images-1.medium.com/fit/c/256/256/1*Qk5hZYwuizIcQd6bCOsTaA.png',
+ 'author_url': 'https://medium.com/@Cambridge_Spark',
+ 'author_username': 'Cambridge_Spark',
+ 'count_claps': 131,
+ 'count_responses': 1,
+ 'info_images': 13,
+ 'info_time': 6.241509433962264,
+ 'info_words': 1283,
+ 'query': 'Machine Learning + Natural Language Processing'}
+2020-01-17 18:52:11 DEBUG: Scraped from <200 https://medium.com/search/posts?q=Machine%20Learning%20+%20Natural%20Language%20Processing>
+{'article_created_at': '2017-10-10 18:31:02',
+ 'article_id': '4193a2e98826',
+ 'article_subtitle': 'CRV has been investing in AI, machine learning and '
+                     'natural language processing applications for a few years '
+                     'now. Our investments in Rethink…',
+ 'article_tags': ['Retail',
+                  'Standard Cognition',
+                  'AI',
+                  'Machine Learning',
+                  'Venture Capital'],
+ 'article_title': 'Standard Cognition is killing the checkout line, and we '
+                  'love it',
+ 'article_updated_at': '2019-01-24 23:34:48',
+ 'article_url': 'https://medium.com//-4193a2e98826',
+ 'author_bio': 'CRV has been a leading investor in high-growth technology '
+               'companies for nearly half a century, focusing on enterprise, '
+               'consumer and deep insight bioengineering.',
+ 'author_name': 'CRV',
+ 'author_pic': 'https://cdn-images-1.medium.com/fit/c/256/256/1*156DBmiw5hU9fe_OHcGaJA.png',
+ 'author_url': 'https://medium.com/@CRVVC',
+ 'author_username': 'CRVVC',
+ 'count_claps': 5,
+ 'count_responses': 0,
+ 'info_images': 0,
+ 'info_time': 1.630188679245283,
+ 'info_words': 432,
+ 'query': 'Machine Learning + Natural Language Processing'}
+2020-01-17 18:52:11 DEBUG: Scraped from <200 https://medium.com/search/posts?q=Machine%20Learning%20+%20Natural%20Language%20Processing>
+{'article_created_at': '2017-06-27 03:03:58',
+ 'article_id': 'e22538b6ebf8',
+ 'article_subtitle': 'Google’s advances in latent-semantic indexing, machine '
+                     'learning, and natural language processing make this '
+                     'statement null and void as of…',
+ 'article_tags': [],
+ 'article_title': 'this is completely off-base and pretty much 100% incorrect.',
+ 'article_updated_at': '2017-11-26 23:56:32',
+ 'article_url': 'https://medium.com//-e22538b6ebf8',
+ 'author_bio': 'Serial Entrepreneur with ADHD, sharing strategies at '
+               'ADDHero.com. Founder FTF.agency + TrafficThinkTank.com + '
+               'semantic.io',
+ 'author_name': 'Nick Eubanks',
+ 'author_pic': 'https://cdn-images-1.medium.com/fit/c/256/256/1*SsmTN_XTBysUsMhGwDtN8Q.jpeg',
+ 'author_url': 'https://medium.com/@nick_eubanks',
+ 'author_username': 'nick_eubanks',
+ 'count_claps': 0,
+ 'count_responses': 1,
+ 'info_images': 0,
+ 'info_time': 0.12452830188679245,
+ 'info_words': 33,
+ 'query': 'Machine Learning + Natural Language Processing'}
+2020-01-17 18:52:11 DEBUG: Scraped from <200 https://medium.com/search/posts?q=Machine%20Learning%20+%20Natural%20Language%20Processing>
+{'article_created_at': '2018-03-24 17:03:15',
+ 'article_id': '71ca59249f76',
+ 'article_subtitle': '“For decades, machine learning approaches targeting '
+                     'Natural Language Processing problems have been based on '
+                     'shallow models (e.g., SVM and…',
+ 'article_tags': ['Machine Learning', 'Deep Learning', 'Pytorch', 'NLP'],
+ 'article_title': 'How to use Pre-trained Word Embeddings in PyTorch',
+ 'article_updated_at': '2018-06-14 23:12:41',
+ 'article_url': 'https://medium.com//-71ca59249f76',
+ 'author_bio': 'Data Scientist @ fligoo.com',
+ 'author_name': 'Martín Pellarolo',
+ 'author_pic': 'https://cdn-images-1.medium.com/fit/c/256/256/1*JY898bXN6myp__0p6s8qfQ.jpeg',
+ 'author_url': 'https://medium.com/@martinpella',
+ 'author_username': 'martinpella',
+ 'count_claps': 613,
+ 'count_responses': 8,
+ 'info_images': 2,
+ 'info_time': 3.062578616352201,
+ 'info_words': 710,
+ 'query': 'Machine Learning + Natural Language Processing'}
+2020-01-17 18:52:11 DEBUG: Scraped from <200 https://medium.com/search/posts?q=Machine%20Learning%20+%20Natural%20Language%20Processing>
+{'article_created_at': '2019-07-31 13:19:39',
+ 'article_id': 'ebb977fa76ab',
+ 'article_subtitle': 'Here is our weekly selection of the top machine '
+                     'learning, deep learning, Natural Language Processing '
+                     '(NLP), and Computer Vision articles!',
+ 'article_tags': ['Machine Learning',
+                  'Deep Learning',
+                  'NLP',
+                  'Sentiment Analysis',
+                  'Data Science'],
+ 'article_title': '6 In-Depth Guides on Machine Learning you Should Read!',
+ 'article_updated_at': '2019-07-31 14:46:02',
+ 'article_url': 'https://medium.com//-ebb977fa76ab',
+ 'author_bio': 'This is the Official Handle of Analytics Vidhya team. For more '
+               'articles, check out the Analytics Vidhya website and Medium '
+               'publication of Analytics Vidhya.',
+ 'author_name': 'Team AV',
+ 'author_pic': 'https://cdn-images-1.medium.com/fit/c/256/256/1*gmLwaJp30qcL4RAm6yVLaw.png',
+ 'author_url': 'https://medium.com/@analytics',
+ 'author_username': 'analytics',
+ 'count_claps': 31,
+ 'count_responses': 0,
+ 'info_images': 1,
+ 'info_time': 1.0452830188679245,
+ 'info_words': 224,
+ 'query': 'Machine Learning + Natural Language Processing'}
+2020-01-17 18:52:11 INFO: Closing spider (finished)
+2020-01-17 18:52:11 INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 385,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/POST': 1,
+ 'downloader/response_bytes': 18941,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 17, 13, 22, 11, 85297),
+ 'item_scraped_count': 10,
+ 'log_count/DEBUG': 11,
+ 'log_count/INFO': 13,
+ 'memusage/max': 57872384,
+ 'memusage/startup': 57868288,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 1, 17, 13, 22, 8, 992355)}
+2020-01-17 18:52:11 INFO: Spider closed (finished)
