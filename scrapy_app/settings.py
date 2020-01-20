@@ -9,7 +9,7 @@ LOG_DIR = path.join(PROJECT_DIR, 'etc')
 INPUT_FILE_PATH = path.join(PROJECT_DIR, 'ml.txt')
 INPUT_FILE_DIR = path.join(PROJECT_DIR, 'input')
 DOWNLOAD_DELAY = 1
-DATA_FILE_PATH = ''
+DATA_FILE_PATH = path.join(INPUT_FILE_DIR, 'data.yaml')
 
 MAX_RESULTS_PER_QUERY = 10
 
