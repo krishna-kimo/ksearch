@@ -4,6 +4,7 @@ import json
 import os
 from scrapy_app.items import DynamicItem
 from scrapy_app.utils import log_response, save_response
+from scrapy_app.utils import data
 from scrapy_app.settings import MAX_RESULTS_PER_QUERY, INPUT_FILE_PATH, INPUT_FILE_DIR
 import logging
 import glob
@@ -22,25 +23,11 @@ class MediumSpider(Spider):
     def start_requests(self):
 
         # Get list of files from the input folder
-        queries_list = []
-        for filename in glob.glob(os.path.join(INPUT_FILE_DIR, '*.txt')):
-            self.logger.info('The file is being used - {}'.format(filename))
-            queries = self.get_queries(filename)
-            for item in queries:
-                queries_list.append(item)
-        self.logger.info('Total no of keywords are: {}'.format(len(queries_list)))
-        self.logger.info('Queries to search: {}'.format(queries_list))
+
+        queries_list = data.get_keywords()
 
         for query in queries_list:
             yield from self.make_request(query, page=1)
-
-    def get_queries(self, filename):
-        _queries_list = []
-        with open(filename, mode='r', encoding='utf-8') as f:
-            for _query in f.read().splitlines():
-                _queries_list.append('Machine Learning' + ' ' + '+' + ' ' + _query)
-            
-            return _queries_list
 
     def make_request(self, query, page):
         url = 'https://medium.com/search/posts?q=%s' % query

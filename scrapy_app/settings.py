@@ -8,10 +8,10 @@ RESULTS_DIR = path.join(PROJECT_DIR, 'results')
 LOG_DIR = path.join(PROJECT_DIR, 'etc')
 INPUT_FILE_PATH = path.join(PROJECT_DIR, 'ml.txt')
 INPUT_FILE_DIR = path.join(PROJECT_DIR, 'input')
-DOWNLOAD_DELAY = 1
+DOWNLOAD_DELAY = 3
 DATA_FILE_PATH = path.join(INPUT_FILE_DIR, 'data.yaml')
 
-MAX_RESULTS_PER_QUERY = 10
+MAX_RESULTS_PER_QUERY = 100
 
 #Avoid <urlopen error timed out>
 AWS_ACCESS_KEY_ID = ""
@@ -20,13 +20,11 @@ AWS_SECRET_ACCESS_KEY = ""
 
 ITEM_PIPELINES = {
     #'scrapy_app.pipelines.DetectLanguagePipeline': 100,
-    #'scrapy_app.pipelines.ChangeTextToParagraphPipeline': 200,
     'scrapy_app.pipelines.Format': 300,
     #'scrapy_app.pipelines.CSVPipeline': 700,
     'scrapy_app.pipelines.JsonPipeline': 800,
-    #'scrapy_app.pipelines.SummaryJsonPipeline': 900,
     'scrapy_app.pipelines.MongoPipeline': 950,
-    #'scrapy_app.pipelines.DuplicateFinderPipeline': 150,
+    'scrapy_app.pipelines.DuplicateFinderPipeline': 150,
 }
 
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; WOW64) ' \

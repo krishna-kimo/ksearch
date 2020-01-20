@@ -125,6 +125,6 @@ class DuplicateFinderPipeline(object):
             self.ids_seen.add(item['article_id'])
             return item
 
-class SummaryAndKeywordPipeline(object):
-    ## Uses the API hosted on the pipeline to get the Keywords and Summary
+class CheckLanguagePipeline(object):
     pass
+
