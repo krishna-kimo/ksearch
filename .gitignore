@@ -112,3 +112,5 @@ input/
 logs/
 results/*
 etc/log.txt
+notebooks
+notebooks/*
