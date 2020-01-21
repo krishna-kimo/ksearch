@@ -99,14 +99,31 @@ def extract_article_text(link):
 
     return article.text
 
+def detect_language(text):
+    from textblob import TextBlob
+
+    blob = TextBlob(text)
+    return blob.detect_language()
+
+def extract_details_text(_link):
+    details = {}
+    _text = extract_article_text(_link)
+    details['lang'] = detect_language(_text)
+    if details.get('lang') == 'en':
+        details['summary'], details['keywords'] = summarize_keywords_summa(_text)
+    else:
+        details['summary'] = []
+        details['keywords'] = []
+
+    return details
+
 #print(extract_keywords(_text))
 #summary, keywords = summarize_keywords_summa(_text)
 #print(summary)
 #print("*"*30)
 #print(keywords)
 
-text = extract_article_text("https://medium.com/swlh/build-a-trading-simulator-in-python-ebe046949dd9")
-summary, keywords = summarize_keywords_summa(text)
-print(summary)
-print("*"*30)
-print(keywords)
+details = extract_details_text("https://medium.com/better-programming/5-simple-git-commands-to-supercharge-productivity-3bbd31da4abb")
+
+for key, value in details.items():
+    print (key, ":", value, "\n")
