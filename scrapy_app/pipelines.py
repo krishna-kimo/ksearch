@@ -7,8 +7,7 @@ import json
 import urllib.parse
 from scrapy_app.settings import RESULTS_DIR
 from scrapy_app.utils import remove_spaces
-from langdetect import detect
-from langdetect import detect_langs
+from scrapy_app.utils.nlp_utils import extract_details_text
 from scrapy.exceptions import DropItem
 import logging
 import pymongo
@@ -125,6 +124,14 @@ class DuplicateFinderPipeline(object):
             self.ids_seen.add(item['article_id'])
             return item
 
-class CheckLanguagePipeline(object):
-    pass
+class ExtractNLPFeatures(object):
+    
+    def process_item(self, item, spider):
+        _details = extract_details_text(item.get('article_url'))
+        item['language'] = _details.get('lang')
+        item['summary'] = _details.get('summary')
+        item['keywords'] = _details.get('keywords')
+
+        return item
+
 

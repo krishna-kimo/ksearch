@@ -88,7 +88,7 @@ def summarize_keywords_summa(text):
     _summary = summarizer.summarize(text)
     _keywords = keywords.keywords(text, words=10)
 
-    return _summary, _keywords
+    return _summary, _keywords.split('\n')
 
 def extract_article_text(link):
     from newspaper import Article
@@ -116,14 +116,3 @@ def extract_details_text(_link):
         details['keywords'] = []
 
     return details
-
-#print(extract_keywords(_text))
-#summary, keywords = summarize_keywords_summa(_text)
-#print(summary)
-#print("*"*30)
-#print(keywords)
-
-details = extract_details_text("https://medium.com/better-programming/5-simple-git-commands-to-supercharge-productivity-3bbd31da4abb")
-
-for key, value in details.items():
-    print (key, ":", value, "\n")
